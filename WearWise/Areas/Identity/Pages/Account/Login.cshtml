@@ -1,0 +1,113 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="auth-section">
+    <div class="auth-card">
+
+        <div class="auth-heading">
+            <span class="section-tag">WELCOME BACK</span>
+            <h1>Welcome Back.</h1>
+            <p>Log in to your WearWise account and organize your style.</p>
+        </div>
+
+        <form id="account" method="post">
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger validation-message"
+                 role="alert"></div>
+
+            <div class="mb-4">
+                <label asp-for="Input.Email" class="form-label">
+                    Email Address
+                </label>
+                <input asp-for="Input.Email"
+                       class="form-control auth-input"
+                       autocomplete="username"
+                       placeholder="Enter your email" />
+                <span asp-validation-for="Input.Email"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Password" class="form-label">
+                    Password
+                </label>
+                <input asp-for="Input.Password"
+                       class="form-control auth-input"
+                       autocomplete="current-password"
+                       placeholder="Enter your password" />
+                <span asp-validation-for="Input.Password"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <label asp-for="Input.RememberMe" class="remember-label">
+                    <input asp-for="Input.RememberMe"
+                           class="form-check-input me-2" />
+                    Remember me
+                </label>
+
+                <a asp-page="./ForgotPassword" class="auth-link">
+                    Forgot password?
+                </a>
+
+            </div>
+
+            <button id="login-submit" type="submit" class="primary-btn w-100">
+                Log In →
+            </button>
+
+        </form>
+
+        <div class="auth-divider">
+            <span>NEW TO WEARWISE?</span>
+        </div>
+
+        <div class="auth-bottom">
+            Don't have an account?
+            <a asp-page="./Register"
+               asp-route-returnUrl="@Model.ReturnUrl">
+                Create Account
+            </a>
+        </div>
+
+        <a asp-page="./ResendEmailConfirmation"
+           class="resend-link">
+            Resend email confirmation
+        </a>
+
+        @if (Model.ExternalLogins?.Count > 0)
+        {
+            <div class="external-login">
+                <p>Or continue with</p>
+
+                <form id="external-account"
+                      asp-page="./ExternalLogin"
+                      asp-route-returnUrl="@Model.ReturnUrl"
+                      method="post">
+
+                    @foreach (var provider in Model.ExternalLogins!)
+                    {
+                        <button type="submit"
+                                class="auth-submit"
+                                name="provider"
+                                value="@provider.Name">
+                            @provider.DisplayName
+                        </button>
+                    }
+
+                </form>
+            </div>
+        }
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

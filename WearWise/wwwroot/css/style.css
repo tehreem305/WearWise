@@ -514,3 +514,155 @@ a {
         padding: 25px;
     }
 }
+
+
+/* PREMIUM WEARWISE LOGIN PAGE */
+
+.auth-section {
+    min-height: 85vh;
+    background: #f0ede6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 65px 20px;
+}
+
+.auth-card {
+    background: #faf8f4;
+    width: 100%;
+    max-width: 490px;
+    padding: 48px;
+    border: 1px solid #e9e3d9;
+    box-shadow: 0 15px 45px rgba(36,35,31,0.06);
+}
+
+.auth-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    .auth-heading h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px;
+        color: #24231f;
+        margin: 15px 0;
+    }
+
+    .auth-heading p {
+        color: #817d76;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+.auth-card .form-label {
+    color: #24231f;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 14px 15px;
+    background: white;
+    border: 1px solid #ddd8ce;
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+    .auth-input:focus {
+        border-color: #a67c52;
+        box-shadow: 0 0 0 3px rgba(166,124,82,0.12);
+    }
+
+.remember-label {
+    font-size: 13px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+    .remember-label input {
+        accent-color: #a67c52;
+    }
+
+.auth-link,
+.auth-bottom a,
+.resend-link {
+    color: #a67c52;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .auth-link:hover,
+    .auth-bottom a:hover,
+    .resend-link:hover {
+        color: #24231f;
+    }
+
+.auth-submit {
+    width: 100%;
+    padding: 15px;
+    background: #24231f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    .auth-submit:hover {
+        background: #a67c52;
+    }
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0 20px;
+    color: #a67c52;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+    .auth-divider::before,
+    .auth-divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #e2dbd0;
+    }
+
+.auth-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #77736c;
+}
+
+.resend-link {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+}
+
+.validation-message {
+    font-size: 13px;
+}
+
+.external-login {
+    margin-top: 25px;
+    text-align: center;
+}
+
+@media(max-width: 576px) {
+    .auth-card {
+        padding: 30px 22px;
+    }
+
+    .auth-heading h1 {
+        font-size: 34px;
+    }
+}

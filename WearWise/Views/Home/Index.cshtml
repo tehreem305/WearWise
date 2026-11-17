@@ -1,0 +1,301 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "WearWise | Your Digital Wardrobe";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewData["Title"]</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                Wear<span>Wise.</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">
+                            Features
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">
+                            How It Works
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-buttons">
+
+                    <a href="/Identity/Account/Login" class="login-btn">
+                        Login
+                    </a>
+
+                    <a href="/Identity/Account/Register" class="signup-btn">
+                        Get Started
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 hero-content">
+
+                    <span class="hero-tag">YOUR STYLE, ORGANIZED</span>
+
+                    <h1>
+                        Your Wardrobe.<br>
+                        Your Style.<br>
+                        <span>Your Rules.</span>
+                    </h1>
+
+                    <p>
+                        Meet your new digital wardrobe. Organize your
+                        clothes, create beautiful outfits, and plan
+                        what to wear for every occasion — all in one place.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="/Identity/Account/Register"
+                           class="primary-btn">
+                            Start Your Wardrobe →
+                        </a>
+
+                        <a href="#features" class="secondary-btn">
+                            Explore Features
+                        </a>
+
+                    </div>
+
+                    <div class="hero-note">
+                        ✦ Make the most of what you already own.
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 hero-image-wrapper">
+
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900"
+                         alt="Fashion collection"
+                         class="hero-image">
+
+                    <div class="floating-card">
+                        <span>✦</span>
+                        <div>
+                            <strong>Style made simple</strong>
+                            <small>Your wardrobe, reimagined.</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section" id="features">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-tag">WHAT WE OFFER</span>
+
+                <h2>Everything Your Wardrobe Needs</h2>
+
+                <p>
+                    A smarter way to manage your clothes and
+                    discover your personal style.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">👗</div>
+                        <h4>Digital Wardrobe</h4>
+                        <p>
+                            Upload and organize your clothing items
+                            into categories. Keep your entire wardrobe
+                            in one convenient place.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h4>Outfit Creator</h4>
+                        <p>
+                            Mix and match your clothing pieces to
+                            create unique outfits and save your
+                            favourite combinations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h4>Occasion Planner</h4>
+                        <p>
+                            Plan your looks for university, parties,
+                            casual outings and formal events without
+                            the daily wardrobe stress.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" id="how-it-works">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-tag">SIMPLE & EASY</span>
+
+                <h2>Your Style Journey Starts Here</h2>
+
+                <p>
+                    Three simple steps to a more organized wardrobe.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <span class="step-number">01</span>
+                        <h4>Add Your Clothes</h4>
+                        <p>
+                            Upload pictures of your clothing and
+                            organize them into categories.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <span class="step-number">02</span>
+                        <h4>Create Your Outfits</h4>
+                        <p>
+                            Combine different clothing pieces
+                            and discover new outfit ideas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <span class="step-number">03</span>
+                        <h4>Plan Your Look</h4>
+                        <p>
+                            Save your favourite outfits and
+                            plan your looks for every occasion.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+        <div class="container text-center">
+
+            <span class="section-tag">READY TO GET STARTED?</span>
+
+            <h2>
+                Your Wardrobe Deserves<br>
+                Something Better.
+            </h2>
+
+            <p>
+                Bring your entire wardrobe together and make
+                getting dressed your favourite part of the day.
+            </p>
+
+            <a href="/Identity/Account/Register"
+               class="primary-btn">
+                Create Your Free Account →
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <a class="footer-brand" href="/">
+                        Wear<span>Wise.</span>
+                    </a>
+
+                    <p>Your digital wardrobe. Your personal style.</p>
+
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <p>© 2026 WearWise. All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

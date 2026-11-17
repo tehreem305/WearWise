@@ -1,0 +1,127 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "My Wardrobe";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wardrobe | WearWise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                Wear<span>Wise.</span>
+            </a>
+
+            <div class="nav-buttons">
+                <a asp-controller="Home" asp-action="UserHome" class="login-btn">
+                    My Wardrobe
+                </a>
+
+                <form asp-area="Identity"
+                      asp-page="/Account/Logout"
+                      asp-route-returnUrl="/Home/Index"
+                      method="post"
+                      style="display:inline;">
+
+                    <button type="submit" class="signup-btn">
+                        Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="dashboard-section">
+        <div class="container">
+
+            <span class="section-tag">YOUR PERSONAL SPACE</span>
+
+            <h1 class="dashboard-title">
+                Welcome to Your Wardrobe!
+            </h1>
+
+            <p class="dashboard-description">
+                Organize your clothes, create outfits and plan your everyday looks.
+            </p>
+
+            <div class="row g-4 mt-3">
+
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <span class="dashboard-icon">👗</span>
+                        <h3>My Wardrobe</h3>
+                        <p>Manage and organize your clothing collection.</p>
+                        <a href="#" class="dashboard-link">Explore Wardrobe →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <span class="dashboard-icon">✨</span>
+                        <h3>Outfit Creator</h3>
+                        <p>Mix and match clothes to create new outfits.</p>
+                        <a href="#" class="dashboard-link">Create Outfit →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <span class="dashboard-icon">📅</span>
+                        <h3>Occasion Planner</h3>
+                        <p>Plan outfits for university, parties and events.</p>
+                        <a href="#" class="dashboard-link">Plan Your Look →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="dashboard-card">
+                        <span class="dashboard-icon">❤️</span>
+                        <h3>Favourite Outfits</h3>
+                        <p>Save and revisit your favourite outfit combinations.</p>
+                        <a href="#" class="dashboard-link">View Favourites →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="dashboard-card">
+                        <span class="dashboard-icon">🧥</span>
+                        <h3>Clothing Categories</h3>
+                        <p>Browse tops, trousers, dresses, shoes and accessories.</p>
+                        <a href="#" class="dashboard-link">Browse Categories →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="dashboard-banner mt-5">
+                <h2>Dress Better. Feel Better.</h2>
+                <p>Your entire wardrobe, organized in one place.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <a class="footer-brand" asp-controller="Home" asp-action="Index">
+                Wear<span>Wise.</span>
+            </a>
+            <p>© 2026 WearWise. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
