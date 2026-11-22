@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@using WearWise.Data
+@using WearWise.Models
 @inject SignInManager<ApplicationUser> SignInManager
 
 <!DOCTYPE html>
@@ -14,6 +14,8 @@
           rel="stylesheet" />
 
     <link rel="stylesheet" href="~/css/style.css" />
+
+    @await RenderSectionAsync("Styles", required: false)
 </head>
 
 <body>
@@ -27,7 +29,10 @@
 
             <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#navbarMenu">
+                    data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -35,14 +40,32 @@
 
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/#">Home</a>
+                        <a class="nav-link" asp-controller="Home"
+                           asp-action="Index">Home</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="/#features">Features</a>
+                        <a class="nav-link" asp-controller="Home"
+                           asp-action="Index" asp-fragment="features">Features</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="/#how-it-works">How It Works</a>
+                        <a class="nav-link" asp-controller="Home"
+                           asp-action="Index" asp-fragment="how-it-works">
+                            How It Works
+                        </a>
                     </li>
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="ProductPage"
+                               asp-action="Index">
+                                Product Management
+                            </a>
+                        </li>
+                    }
                 </ul>
 
                 <div class="ms-auto nav-buttons">
@@ -61,7 +84,8 @@
                               method="post"
                               class="d-inline">
 
-                            <button type="submit" class="signup-btn border-0">
+                            <button type="submit"
+                                    class="signup-btn border-0">
                                 Logout
                             </button>
                         </form>
@@ -112,6 +136,7 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

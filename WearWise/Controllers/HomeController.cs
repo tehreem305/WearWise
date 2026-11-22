@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WearWise.Controllers
 {
@@ -12,6 +13,12 @@ namespace WearWise.Controllers
 
         [Authorize]
         public IActionResult UserHome()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult AdminHome()
         {
             return View();
         }
